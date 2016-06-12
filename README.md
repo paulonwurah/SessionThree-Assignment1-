@@ -1,0 +1,6 @@
+1.	RDD stands for Resilient Distribution Datasets which is a collection of fault-tolerant operational elements that run in parallel. The partitioned data in RDD is immutable and is distributed in nature.
+2.	A Partition is a smaller and logical division of data that is similar to the split in Map Reduce. Partitioning is the process that helps derive logical units of data in order to speed up data processing.
+Here’s an example:  val someRDD = sc.parallelize(1 to 1000, 6), Here an RDD of 1000 elements is created in six partitions, which then distributes a map task before collecting the elements back to the driver program.
+3.	The operations RDD supports include transformation and actions
+4.	Transformations are functions applied on RDD, resulting in a new RDD. It does not execute until an action occurs. map() and filer() are examples of transformations, where the former applies the function assigned to it on each element of the RDD and results in another RDD. The filter() creates a new RDD by selecting elements from the current RDD.
+5.	An action brings back the result of all transformation to the local machine from the cluster. Examples of actions include reduce() which implements the function passed again and again until only one value I left. Also, there is the collect() and also take(). 
